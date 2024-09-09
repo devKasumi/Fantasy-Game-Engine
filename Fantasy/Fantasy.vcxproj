@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Fantasy\Log.h" />
     <ClInclude Include="src\Fantasy.h" />
     <ClInclude Include="src\Fantasy\Application.h" />
     <ClInclude Include="src\Fantasy\Core.h" />
     <ClInclude Include="src\Fantasy\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Fantasy\Log.cpp" />
     <ClCompile Include="src\Fantasy\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -121,6 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>FT_PLATFORM_WINDOWS;FT_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Fantasy\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

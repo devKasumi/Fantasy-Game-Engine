@@ -1,0 +1,3 @@
+[submodule "Fantasy/vendor/spdlog"]
+	path = Fantasy/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
