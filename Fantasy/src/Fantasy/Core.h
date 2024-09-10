@@ -7,5 +7,7 @@
 		#define FANTASY_API __declspec(dllimport)	
 	#endif
 #else 
-#error Fantasy only support Windows !
+	#error Fantasy only support Windows !
 #endif
+
+#define BIT(x) (1 << x)

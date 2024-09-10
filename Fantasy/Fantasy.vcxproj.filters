@@ -19,6 +19,10 @@
     <ClInclude Include="src\Fantasy\Log.h">
       <Filter>Fantasy</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fantasy\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Fantasy\Events\Event.h" />
+    <ClInclude Include="src\Fantasy\Events\KeyEvent.h" />
+    <ClInclude Include="src\Fantasy\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Fantasy\Application.cpp">
