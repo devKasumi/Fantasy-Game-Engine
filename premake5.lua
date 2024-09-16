@@ -18,6 +18,9 @@ project "Fantasy"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "ftpch.h"
+    pchsource "Fantasy/src/ftpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -26,6 +29,7 @@ project "Fantasy"
 
     includedirs 
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 

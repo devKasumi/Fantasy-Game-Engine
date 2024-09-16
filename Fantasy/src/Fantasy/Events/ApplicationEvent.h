@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Fantasy {
 
 	class FANTASY_API WindowResizeEvent : public Event

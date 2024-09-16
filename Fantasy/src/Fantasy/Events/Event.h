@@ -1,8 +1,6 @@
 #pragma once
 
-#include "../Core.h"
-#include <string>
-#include <functional>
+#include "Fantasy/Core.h"
 
 namespace Fantasy {
 
@@ -57,7 +55,7 @@ namespace Fantasy {
 	class EventDispatcher
 	{
 		template<typename T>
-		using EventFn = std::funtion<bool(T&)>;		// need to check later
+		using EventFn = std::function<bool(T&)>;		// need to check later
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event)
@@ -70,7 +68,7 @@ namespace Fantasy {
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_Handled = func(*(T*)&m_Event)
-					return true;
+				return true;
 			}
 			return false;
 		}
@@ -79,13 +77,13 @@ namespace Fantasy {
 		Event& m_Event;
 	};
 
-	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	/*inline std::ostream& operator<<(std::ostream& os, const Event& e)
 	{
 		return os << e.ToString();
+	}*/
+	inline std::string format_as(const Event& e) // support spdlog -> log event to console
+	{
+		return e.ToString();
 	}
-
-
-
-
 
 }
