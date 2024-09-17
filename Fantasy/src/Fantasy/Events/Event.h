@@ -1,6 +1,9 @@
 #pragma once
 
 #include "Fantasy/Core.h"
+#include <string>
+#include <sstream>
+#include <functional>
 
 namespace Fantasy {
 

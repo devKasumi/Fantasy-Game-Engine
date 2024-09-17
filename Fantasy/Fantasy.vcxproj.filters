@@ -7,10 +7,19 @@
     <Filter Include="Fantasy\Events">
       <UniqueIdentifier>{FFA1071C-EB6F-FB21-D403-6C48C070D786}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Fantasy.h" />
     <ClInclude Include="src\Fantasy\Application.h">
+      <Filter>Fantasy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Fantasy\Assert.h">
       <Filter>Fantasy</Filter>
     </ClInclude>
     <ClInclude Include="src\Fantasy\Core.h">
@@ -34,6 +43,12 @@
     <ClInclude Include="src\Fantasy\Log.h">
       <Filter>Fantasy</Filter>
     </ClInclude>
+    <ClInclude Include="src\Fantasy\Window.h">
+      <Filter>Fantasy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\ftpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="src\Fantasy\Log.cpp">
       <Filter>Fantasy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ftpch.cpp" />
   </ItemGroup>

@@ -10,6 +10,12 @@ workspace "Fantasy"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Fantasy/vendor/GLFW/include"
+
+include "Fantasy/vendor/GLFW"
+
 project "Fantasy"
     location "Fantasy"
     kind "SharedLib"
@@ -30,7 +36,15 @@ project "Fantasy"
     includedirs 
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib",
+        "dwmapi.lib"
     }
 
     filter "system:windows"
