@@ -2,6 +2,8 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Fantasy/Events/ApplicationEvent.h"
+
 #include "Window.h"
 
 namespace Fantasy {
@@ -15,7 +17,11 @@ namespace Fantasy {
 		virtual ~Application();
 
 		void Run();
+
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

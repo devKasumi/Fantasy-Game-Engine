@@ -1,9 +1,7 @@
 #pragma once
 
 #include "Fantasy/Core.h"
-#include <string>
-#include <sstream>
-#include <functional>
+#include "ftpch.h"
 
 namespace Fantasy {
 
@@ -70,7 +68,7 @@ namespace Fantasy {
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event)
+				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;
